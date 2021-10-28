@@ -1,5 +1,14 @@
 #!/usr/bin/python3
 
+# ---------------------------
+# python project for the TP1 
+# nº88729 - Sara Costa Pombinho
+# nº88939 - Manuel Alberto Silva Gomes
+# nº109483 - Diogo dos Santos Covêlo Simão Vieira
+# G9 from the class P2
+# -----------------------------
+
+
 from time import sleep
 import argparse
 from tictoc import *
