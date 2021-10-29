@@ -12,5 +12,14 @@ def printing_test(max_value):
 
     # (maybe) first seeing the ascii table and doing a list with all the lower case letters
     letters = [chr(x) for x in range(97, 123)]
+    counter = 0
 
-    print(letters)
+    #create a better way than a counter in a while
+    while counter <= max_value:
+        rand_letter = random.choice(letters)
+        print('The program wants' + rand_letter)
+        typed_letter = readchar.readkey()
+        if typed_letter == ' ':
+            print('the program was interrupted')
+            break
+        counter += 1
