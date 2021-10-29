@@ -20,6 +20,8 @@ def time_mode(max_value):
 
     print(letters)
     elapsed = time() - t
+    letters_hit = 0
+    letters_miss = 0
 
     while elapsed < max_value:
         rand_letter = random.choice(letters)
@@ -28,6 +30,10 @@ def time_mode(max_value):
         if typed_letter == ' ':
             print('the program was interrupted')
             break
+        if typed_letter != rand_letter:
+            letters_miss += 1
+        else
+            letters_hit += 1
         #the toc prints the value and elapsed works for the while cycle
         elapsed = time() - t
         toc()
