@@ -22,4 +22,10 @@ def printing_test(max_value):
         if typed_letter == ' ':
             print('the program was interrupted')
             break
+        if typed_letter != rand_letter:
+          # fazer aqui o print da letra (visto que estes if's são iguais secalhar uma função que recebe a typed letter 
+          # e a rand_letter seria o melhor
+            letters_miss += 1
+        else
+            letters_hit += 1
         counter += 1
