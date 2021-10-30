@@ -13,7 +13,7 @@ def tic():
     """
     global start_time
     start_time = time()
-    return
+    return start_time
 
 
 def toc():
@@ -24,6 +24,6 @@ def toc():
     global start_time
     final_time = time()
     elapsed_time = final_time - start_time
-    print('Time elapsed: ' + Fore.RED + str(elapsed_time) + Style.RESET_ALL + ' seconds.')
-    return
+    #print('Time elapsed: ' + Fore.RED + str(elapsed_time) + Style.RESET_ALL + ' seconds.')
+    return elapsed_time
 

@@ -12,13 +12,11 @@
 from time import sleep
 import argparse
 from tictoc import *
+from typing_test import *
+from time_mode import *
 
 
 def main():
-    tic()
-    sleep(10)       # This is just a debug line, so we can make sure it works.
-    toc()
-
     #the functions are still not done
     #arguments asked for the program
     parser = argparse.ArgumentParser()
@@ -27,12 +25,13 @@ def main():
     parser.add_argument('-mv ', '--max_value', help='maximum number of inputs for number of inputs mode',
                         type=int)
     args = vars(parser.parse_args())
+    max_value = args['max_value']
+    utm = args['use_time_mode']
 
-    #thinking in a way to separate both types of tests
-    if args['use_time_mode']:
-        time_mode(args['max_value']) #function using the time mode
+    if utm:
+        time_mode(max_value)
     else:
-        printing_test(args['max_value']) #function not using the time mode
+        typing_test(max_value)
 
 
     return
