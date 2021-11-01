@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-
+from colorama import Style
 
 def statsDict(inputTupleList, test_start, test_end):
     """
@@ -69,9 +69,9 @@ def statsDict(inputTupleList, test_start, test_end):
 
     for key in my_dict:
         if (key == "inputs"):
-            print('inputs : [')
+            print(Style.BRIGHT + '\tinputs' + Style.RESET_ALL + ' : [')
             for i in inputTupleList:
-                print(i)
-            print(']')
+                print('\t \t' + str(i))
+            print('\t ]')
         else:
-            print(key, ':', my_dict[key])
+            print('\t' + Style.BRIGHT + key + Style.RESET_ALL, ':', my_dict[key])
