@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 # ---------------------------
-# python project for the TP1 
+# python project for the TP1
 # nº88729 - Sara Costa Pombinho
 # nº88939 - Manuel Alberto Silva Gomes
 # nº109483 - Diogo dos Santos Covêlo Simão Vieira
@@ -14,6 +14,7 @@ import argparse
 from tictoc import *
 from typing_test import *
 from time_mode import *
+from dic import *
 
 
 def main():
@@ -29,9 +30,9 @@ def main():
     utm = args['use_time_mode']
 
     if utm:
-        time_mode(max_value)
+        statsDict(time_mode(max_value))
     else:
-        typing_test(max_value)
+        statsDict(typing_test(max_value))
 
 
     return
