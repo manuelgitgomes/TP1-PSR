@@ -3,9 +3,10 @@
 from colorama import Fore, Back, Style
 import readchar
 from collections import namedtuple
-from time import time
+from time import ctime
 import random
 from tictoc import *
+import sys
 
 # Define the named tuple
 letters_tuple = namedtuple('letters_tuple', ['req', 'typed', 'time'])
@@ -36,7 +37,7 @@ def typing_test(max_value):
     print("Click on any letter to start the test. Press spacebar to end.")
 
     # Saves start time
-    start_time = time()
+    start_time = ctime()
 
     # While the number of members in the list of tuples does not surpass the max_value
     while len(tuple_list) < max_value:
@@ -70,8 +71,10 @@ def typing_test(max_value):
     # If the cycle broke in a natural matter, print the respective text
     if not break_bool:
         print('You have reached the maximum value of ' + str(max_value) + ' letters, typing test ended.')
+    else:
+        sys.exit(1)
 
     # Saves stop time
-    stop_time = time()
+    stop_time = ctime()
     return tuple_list, start_time, stop_time
 

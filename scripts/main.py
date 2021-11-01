@@ -30,10 +30,11 @@ def main():
     utm = args['use_time_mode']
 
     if utm:
-        statsDict(time_mode(max_value))
+        tuple_list, start_time, stop_time = time_mode(max_value)
     else:
-        statsDict(typing_test(max_value))
+        tuple_list, start_time, stop_time = typing_test(max_value)
 
+    statsDict(tuple_list, start_time, stop_time)
 
     return
 

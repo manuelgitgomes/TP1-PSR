@@ -1,8 +1,18 @@
 #!/usr/bin/python3
 
-#Function recieves a list of namedtuples, which are the Inputs, the beggining and end date
+
 
 def statsDict(inputTupleList, test_start, test_end):
+    """
+    Function recieves a list of namedtuples, which are the Inputs, the begining and end date, calculates stats and
+    prints them
+
+    :param inputTupleList: Named tuple list
+    :param test_start: ctime()
+    :param test_end: ctime()
+    :return:
+    """
+
 
     #Defining counting vars
     number_of_misses = 0
@@ -11,7 +21,7 @@ def statsDict(inputTupleList, test_start, test_end):
     number_of_types = 0
     type_hit_total_duration = 0
     type_miss_total_duration = 0
-
+    print('Here are your stats:')
 
     #Accounting for each letter typed
     for i in inputTupleList:

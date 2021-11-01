@@ -5,7 +5,8 @@ import readchar
 from tictoc import *
 import random
 from collections import namedtuple
-from time import time
+from time import time, ctime
+import sys
 
 # Define the named tuple
 letters_tuple = namedtuple('letters_tuple', ['req', 'typed', 'time'])
@@ -32,6 +33,7 @@ def time_mode(max_value):
 
     # Start counting the overall time
     start_time = tic()
+    start_time2 = ctime()
 
     # Print the starting parameters
     print("Program stops after " + Fore.BLUE + Style.BRIGHT + str(max_value) + Style.RESET_ALL + ' seconds')
@@ -78,7 +80,10 @@ def time_mode(max_value):
     # If the cycle broke in a natural matter, print the respective text
     if not break_bool:
         print('You have reached the maximum value of ' + str(max_value) + ' seconds, typing test ended.')
+    else:
+        sys.exit(1)
 
     # Saves stop time
-    stop_time = time()
-    return tuple_list, start_time, stop_time
+    stop_time = ctime()
+
+    return tuple_list, start_time2, stop_time
