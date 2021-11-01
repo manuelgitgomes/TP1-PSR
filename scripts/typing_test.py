@@ -36,7 +36,7 @@ def typing_test(max_value):
     print("Click on any letter to start the test. Press spacebar to end.")
 
     # Saves start time
-    start_time = time.time()
+    start_time = time()
 
     # While the number of members in the list of tuples does not surpass the max_value
     while len(tuple_list) < max_value:
@@ -72,6 +72,6 @@ def typing_test(max_value):
         print('You have reached the maximum value of ' + str(max_value) + ' letters, typing test ended.')
 
     # Saves stop time
-    stop_time = time.time()
+    stop_time = time()
     return tuple_list, start_time, stop_time
 

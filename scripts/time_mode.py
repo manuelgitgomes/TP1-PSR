@@ -80,5 +80,5 @@ def time_mode(max_value):
         print('You have reached the maximum value of ' + str(max_value) + ' seconds, typing test ended.')
 
     # Saves stop time
-    stop_time = time.time()
+    stop_time = time()
     return tuple_list, start_time, stop_time
