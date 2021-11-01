@@ -35,6 +35,9 @@ def typing_test(max_value):
     print("Program stops after " + Fore.RED + Style.BRIGHT + str(max_value) + Style.RESET_ALL + ' letters')
     print("Click on any letter to start the test. Press spacebar to end.")
 
+    # Saves start time
+    start_time = time.time()
+
     # While the number of members in the list of tuples does not surpass the max_value
     while len(tuple_list) < max_value:
         # Randomizes the letter and shows it
@@ -67,5 +70,8 @@ def typing_test(max_value):
     # If the cycle broke in a natural matter, print the respective text
     if not break_bool:
         print('You have reached the maximum value of ' + str(max_value) + ' letters, typing test ended.')
-    return tuple_list
+
+    # Saves stop time
+    stop_time = time.time()
+    return tuple_list, start_time, stop_time
 

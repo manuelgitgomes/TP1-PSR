@@ -78,4 +78,7 @@ def time_mode(max_value):
     # If the cycle broke in a natural matter, print the respective text
     if not break_bool:
         print('You have reached the maximum value of ' + str(max_value) + ' seconds, typing test ended.')
-    return tuple_list
+
+    # Saves stop time
+    stop_time = time.time()
+    return tuple_list, start_time, stop_time
