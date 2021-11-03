@@ -64,8 +64,7 @@ def time_mode(max_value):
         # If the typed letter is the spacebar, the program stops
         if typed_letter == ' ':
             print('The program was interrupted, you pressed the spacebar!')
-            break_bool = True
-            break
+            sys.exit(1)
         # If the typed letter is different then the one shown, inform the user and count it
         elif typed_letter != rand_letter:
             print(
@@ -78,10 +77,7 @@ def time_mode(max_value):
             letters_hit += 1
 
     # If the cycle broke in a natural matter, print the respective text
-    if not break_bool:
-        print('You have reached the maximum value of ' + str(max_value) + ' seconds, typing test ended.')
-    else:
-        sys.exit(1)
+    print('You have reached the maximum value of ' + str(max_value) + ' seconds, typing test ended.')
 
     # Saves stop time
     stop_time = ctime()
