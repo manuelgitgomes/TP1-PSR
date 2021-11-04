@@ -9,17 +9,18 @@
 # -----------------------------
 
 
-from time import sleep
 import argparse
-from tictoc import *
 from typing_test import *
 from time_mode import *
 from dic import *
 
 
 def main():
-    #the functions are still not done
-    #arguments asked for the program
+    """
+    Defines the parser, its argumetns and runs the functions
+    :return:
+    """
+    # Arguments asked for the program
     parser = argparse.ArgumentParser()
     parser.add_argument('-utm ', '--use_time_mode', help='To run the program using the time mode',
                         action='store_true')
@@ -29,11 +30,13 @@ def main():
     max_value = args['max_value']
     utm = args['use_time_mode']
 
+    # If you select time mode, time mode is ran. If not, letter mode is ran.
     if utm:
         tuple_list, start_time, stop_time = time_mode(max_value)
     else:
         tuple_list, start_time, stop_time = typing_test(max_value)
 
+    # Calculates the stats and the prints them
     statsDict(tuple_list, start_time, stop_time)
 
     return
